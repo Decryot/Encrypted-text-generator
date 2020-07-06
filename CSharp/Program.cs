@@ -59,7 +59,7 @@ namespace TextEncrypter
         static string encrypted;
         public static void Main(string[] args)
         {
-            // the higher the percentage, the more ecrypted the word becomes
+            // the higher the percentage, the more encrypted the word becomes
             encrypted = Letters.generateString("Institution", 40);
             Console.WriteLine(encrypted + " encrypted");
         }
