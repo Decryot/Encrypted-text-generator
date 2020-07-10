@@ -27,19 +27,22 @@ function encryptWord(word, percent) {
 
     // encrypting
     for (var i = 0; i < chars.length; i++) {
+        var cap = Math.floor(Math.random());
+
         if (savedPlaces[i] == true) {
             newWord += savedChars[i];
         }
         else {
             var letter = letters[Math.floor(Math.random() * letters.length)];
-            newWord+=letter;
+            if (cap == 0) newWord+=letter.toUpperCase();
+            else newWord+=letter;
         }
     }
 
     return newWord;
 }
 
-var encryptedWord = encryptWord("hello, world",90)
+var encryptedWord = encryptWord("hello, world",50)
 var newEncryptedWord = encryptedWord.split("undefined") // removes 'undefined' at the start
 
 console.log(newEncryptedWord)
